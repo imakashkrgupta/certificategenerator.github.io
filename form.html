@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Generator/ Fill Details</title>
+    <link rel="icon" type="image/fav-icon" href="favicon.png">
+    
+    <link rel="stylesheet" href="certificate.css">
+    <script src="certificate.js"></script>
+</head>
+
+<body id="body">
+
+    <!---------------------NAVBAR-------------------->
+    <nav>
+        <div class="logo">Certificate Generator</div>
+        <div class="nav_links" id="nav_links_id">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="form.html">Certificate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+        </div>
+        <div class="menu_toggle">
+            <img id="menu_on" onclick="menu_show()" src="https://img.icons8.com/ios/30/000000/menu--v1.png" />
+            <img id="menu_off" onclick="menu_hide()" src="https://img.icons8.com/ios/30/000000/menu--v1.png" />
+        </div>
+    </nav>
+    <!----------------------------------------------->
+
+    <section class="form_make_cert_wrapper" id="form_for_cert">
+        <h2>Fill the details below:</h2> <br><br>
+        <div class="form">
+            <input type="text" id="auth" placeholder="Certificate Issued by" required><br>
+            <input type="text" id="std_name" placeholder="Candidate Name" required> <br>
+            <input type="text" id="class_dept" placeholder="class/Dept./Year" required> <br>
+            <textarea id="achiev" cols="30" rows="10" required placeholder="Achievents"></textarea><br>
+            <input type="date" id="auth_date" required><br>
+            <button onclick="makeCertificate()" type="submit">Make Certificate</button>
+        </div>
+    </section>
+
+
+    <!------------------------------------------------------------>
+    <section id="re_generated_cert">
+        <div class="scrolling_cert_div">
+        
+        <div class="re_subwrapper" id="new_certi_data">
+            <div id="certificate_printi">
+            <!--<div class="cert_wrapper" >
+                <div id="the_cert_id">
+                    <div class="cert_outline_wrap" id="certificate_data">-->
+                        <!--<img src="certificate_background2.png" alt="">
+                        <div class="cert_outline" id="cert_outline_id">
+                            <h1>Certificate Of Merit</h1> <br>
+                            <p class="cert_content">This is to Certify that <br> <span id="css_name"></span><br> of
+                                <span id="css_class"></span> <br> has achieved
+                            <p id="css_achiev"></p>
+                            </p>
+                            <br> <br>
+                            <div class="cert_info">
+                                <div class="issue">
+                                    Issuing Authority: <br>
+                                    <div id="css_authority"></div>
+                                </div>
+                                <br>
+                                <div class="dated">
+                                    Dated: <br>
+                                    <div id="css_date"></div>
+                                </div>
+                            </div>-->
+
+                            <!---------------------->
+                            <div class="main_wrapper_div" id="main_wrapper_div_id">
+                                <img src="certificate_background2.png" />
+                                <h1>CERTIFICATE OF MERIT</h1>
+                                <p class="this_p">
+                                    <!--Lorem Ipsum is simply dummy text of the printing and
+                                    typesetting industry. Lorem Ipsum has been the industry's
+                                    standard dummy text ever since the 1500s, when an unknown
+                                    printer took a galley of type and scrambled it to make a type
+                                    specimen book-->
+                                    This is to Certify that <br> <span id="css_name" ></span> <br> of
+                                    <span id="css_class" ></span> has achieved
+                                <p id="css_achiev" ></p>
+                                </p> <br>
+                                </p>
+                                <div class="re_cert_info">
+                                    <div class="re_issue">
+                                        Issued by: <br>
+                                        <div class="re_issues_by" id="css_authority"></div>
+                                    </div>
+                        
+                                    <div class="re_dated_on">
+                                        Dated: <br>
+                                        <div class="re_dated" id="css_date"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <!--------------------->
+
+                        </div>
+                    </div>
+                    <!--</div>
+                </div>
+            </div>-->
+            <div class="btn_wrap">
+                <button class="btn_gen_cert" onclick="makeagain()">Make Again</button>
+                <button class="btn_gen_cert" onclick="printcert()">Print / save</button>
+            </div>
+    </section>
+
+    <!--------------------------------------------------------------------->
+
+
+    <script src="certificate.js"></script>
+    <!---------------------------->
+    <!--<style>
+        #certificate_printi{
+            /*min-width: 600px;
+            overflow: scroll;*/
+            border: 1px solid purple;
+        }
+        .scrolling_cert_div{
+            width: 100%;
+            overflow-y: scroll;
+        }
+    .re_subwrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+    .main_wrapper_div {
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        width: 600px;
+        height: 390px;
+        font-family: 'Red Hat Display', sans-serif;
+        /*margin: auto;*/
+    }
+
+    .main_wrapper_div img {
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .main_wrapper_div .this_p {
+        padding: 6px 37px;
+        text-align: center;
+    }
+    .main_wrapper_div p{
+        text-align: center;
+        /*padding: 0px 30px;*/
+        margin: 0px 37px;
+    }
+
+    .main_wrapper_div h1 {
+        text-align: center;
+        padding: 46px 10px 20px 10px;
+    }
+    .main_wrapper_div span{
+        font-weight: bold;
+    }
+    .re_cert_info {
+        display: flex;
+        justify-content: space-between;
+        /*align-items: center;*/
+        padding: 0px 46px;
+    }
+</style>-->
+    <!---------------------------->
+    
+</body>
+
+</html>
